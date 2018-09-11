@@ -1,0 +1,11 @@
+{
+    "name": "parabol/parabol-seo-bundle",
+    "version": "master",
+    "type": "symfony-bundle",
+    "require" : {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": { "Parabol\\SeoBundle\\": "" }
+    }
+}

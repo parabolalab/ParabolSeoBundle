@@ -1,0 +1,20 @@
+parameters:
+services:
+    
+    parabol.listener.seo_request:
+        class: Parabol\SeoBundle\EventListener\SeoRequestListener
+        arguments:
+            - "@service_container"
+            - "@doctrine.orm.entity_manager"
+            - "@parabol.metatag"
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+
+    parabol.metatag:
+        class: Parabol\SeoBundle\Service\Metatag
+        tags:
+            - { name: twig.extension }
+
+
+
